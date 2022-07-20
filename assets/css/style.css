@@ -15,7 +15,7 @@ overlay: 5000
 body{
     /* font-family: 'Roboto', sans-serif; */
     font-family: 'Open Sans', sans-serif;
-    background:#e0e3e9;
+    background:#fff;
     color:rgb(58, 71, 83);
 }
 *,*:before,*:after{
@@ -47,11 +47,14 @@ body{
     transform: translate(-50%,-50%);
     padding:40px 30px 10px 30px;
     background:#fff;
-    border-radius: 4px;
+    /* border-radius: 4px; */
     background-size:cover;
     overflow:hidden;
     backface-visibility: hidden;
-    box-shadow:0 2px 4px 0 rgba(22,26,33,.2);
+    /* box-shadow:0 2px 4px 0 rgba(22,26,33,.2); */
+
+    border-radius: 8px;
+    border: 1px solid #dadce0;
 }
 
 /* =====================================
@@ -139,19 +142,26 @@ body{
 }
 .heading > .h_main{
     /* display:inline-block; */
-    font-size:24px;
-    font-weight:600;
+    font-family: "Google Sans","Noto Sans Myanmar UI",arial,sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.3333;
 }
 .heading > .h_sub{
     /* display:inline-block; */
-    font-size:16px;
-    font-weight:600;
+ 
+ 
     margin-top:8px;
     height:30px;
     text-align: center;
-    font-size:14px;
-    line-height:8px;
-    letter-spacing: -0.1px;
+  
+  
+
+    color: #202124;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0.1px;
+    line-height: 1.5;
 }
 
 /* ===========================================
@@ -186,6 +196,7 @@ it displays with the input email value
     margin-right:10px;
 }
 .user-tag>.email-text{
+    cursor: pointer;
     max-width:200px;
     white-space: nowrap;
     overflow: hidden !important;
@@ -228,19 +239,29 @@ it displays with the input email value
 
 /* content-1 styles start */
 .forgot{
+    cursor: pointer;
     display:inline-block;
     font-size:14px;
     font-weight:600;
-    color:rgb(0, 130, 190);
+    color:#1a73e8;
     /* margin-top:10px; */
 }.info{
     font-size: 12px;
     margin-top:25px;
 }.create-next{
+    cursor: pointer;
+    font-family: "Google Sans",Roboto,Arial,sans-serif;
+    font-size: .875rem;
+    letter-spacing: .0107142857em;
+    font-weight: 500;
+    text-transform: none;
+   
+   
+    color: #1a73e8;
     display:flex;
     justify-content: space-between;
     font-size: 14px;
-    font-weight: 600;
+ 
     margin-top:50px;
     align-items:center;
 }
@@ -266,6 +287,7 @@ it displays with the input email value
 }
 
 .content2 .go-back{
+    cursor: pointer;
     background-color: rgb(255, 255, 255); /* Green */
     /* border: none; */
     color: rgb(0, 0, 0);
@@ -341,10 +363,10 @@ it displays with the input email value
     padding: 12px 20px;
     margin: 8px 0;
     outline:none;
-    border:2px solid #b1b1b1;
     border-radius: 4px;
+    border: 1px solid #dadce0;
     font-size:16px;
-    font-weight:600;
+    /* font-weight:600; */
     color:rgb(97, 111, 119);
     transition:.2s border;
     /* background:#364349; */
@@ -354,9 +376,9 @@ it displays with the input email value
     position:absolute;
     top:50%;
     transform:translatey(-50%);
-    font-size:14px;
-    font-weight:600;
-    color:rgb(100, 118, 129);
+    color: #5f6368;
+    font-size: 16px;
+    font-weight: 400;
     margin-left:25px;
     background:rgb(255, 255, 255);
     transition: .2s;
@@ -383,8 +405,9 @@ it displays with the input email value
 
 /* buttons */
 .btn{
+    cursor: pointer;
     position: relative;
-    background-color: #4CAF50; /* Green */
+    background-color: #1a73e8; /* Green */
     border: none;
     color: white;
     padding: 9px 26px;
@@ -392,26 +415,28 @@ it displays with the input email value
     text-decoration: none;
     display: inline-block;
     font-size: 14px;
-    font-weight:600;
+    /* font-weight:600; */
     border-radius: 4px;
-    box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);  
+    /* box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12);   */
     outline: none;  
     margin-right:10px;
     transition: box-shadow 0.2s;
 }
 .btn::before {
+    cursor: pointer;
     content: "";
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255,255,255,.4);
+    /* background-color: rgba(255,255,255,.4); */
     opacity: 0;
     transition: opacity 0.2s;
 }
 /* Ripple */
 .btn::after {
+    cursor: pointer;
     content: "";
     position: absolute;
     left: 50%;
@@ -420,7 +445,7 @@ it displays with the input email value
     padding: 50%;
     width: 32px; /* Safari */
     height: 32px; /* Safari */
-    background-color: rgba(255,255,255,0.35);
+    /* background-color: rgba(255,255,255,0.35); */
     opacity: 0;
     transform: translate(-50%, -50%) scale(1);
     transition: opacity 1s, transform 0.5s;
@@ -438,8 +463,8 @@ it displays with the input email value
 }
 /* disabled bth */
 .btn:disabled {
-    color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38);
-    background-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.12);
+    /* color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.38); */
+    /* background-color: rgba(var(--pure-material-onsurface-rgb, 0, 0, 0), 0.12); */
     box-shadow: none;
     cursor: initial;
 }

